@@ -1,0 +1,56 @@
+<!-- <p>orders works!</p> -->
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Sr. No</th>
+        <th>Order No</th>
+        <th>Total Amount</th>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ order.orderId }}</td>
+        <td>{{ order.totalamount | currency:'INR' }}</td>
+        <td>{{ order.productid }}</td>
+        <td>{{ order.productName }}</td>
+        <td>{{ order.quantity }}</td>
+        <td>{{ order.amount | currency:'INR' }}</td>
+        <td>{{ order.date | date: 'yyyy-MM-dd hh:mm a' }}</td>
+        <td>{{ order.name }}</td>
+        <td>
+          <div class="mx-2">
+            <ng-container [ngSwitch]="order.status">
+              <button *ngSwitchCase="0" type="button" class="btn btn-danger disabled">Active</button>
+              <button *ngSwitchCase="1" type="button" class="btn btn-warning disabled">Pending</button>
+              <button *ngSwitchCase="2" type="button" class="btn btn-success disabled">Resolved</button>
+            </ng-container>
+          </div>
+          <div class="dropdown mx-2">
+            <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-edit"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a class="dropdown-item bg-danger text-white" (click)="change(order, 0)">Active</a>
+              </li>
+              <li>
+                <a class="dropdown-item bg-warning text-dark" (click)="change(order, 1)">Pending</a>
+              </li>
+              <li>
+                <a class="dropdown-item bg-success text-white" (click)="change(order, 2)">Resolved</a>
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>

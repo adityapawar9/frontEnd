@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Welcome, {{name}}</h2>
+    </div>
+  </div>
+
+  <!-- Buttons for switching between sections -->
+  <div class="row justify-content">
+    <div class="col-md-4 d-flex justify-content-around p-1">
+      
+      <!-- Categories Section -->
+      <button class="btn btn-primary mx-2" (click)="changeWhatToShow(0)">Categories</button>
+
+      <!-- Products Section -->
+      <button class="btn btn-primary mx-2" (click)="changeWhatToShow(1)">Products</button>
+
+      <!-- Orders Section Dropdown -->
+      <div class="dropdown mx-2">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Orders
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li>
+            <a class="dropdown-item bg-danger" (click)="sort(0)">Active</a>
+          </li>
+          <li>
+            <a class="dropdown-item bg-warning" (click)="sort(1)">Pending</a>
+          </li>
+          <li>
+            <a class="dropdown-item bg-success" (click)="sort(2)">Resolved</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display sections based on the whatToShow state -->
+  <div class="row">
+    <div *ngIf="whatToShow === 0">
+      <app-category [catList]="catList"></app-category>
+    </div>
+    <div *ngIf="whatToShow === 1">
+      <app-product [products]="products"></app-product>
+    </div>
+    <div *ngIf="whatToShow === 2">
+      <app-orders [orders]="orders"></app-orders>
+    </div>
+  </div>
+</div>

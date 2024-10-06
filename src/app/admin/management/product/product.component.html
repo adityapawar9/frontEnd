@@ -1,0 +1,102 @@
+<div class="product-container">
+  <!-- Button to trigger the modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal" (click)="resetForm()">
+    Add New Product
+  </button>
+
+  <!-- Add or Update Product Modal -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">{{ editMode ? 'Update Product' : 'Add New Product' }}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" [(ngModel)]="name" name="productName">
+              </div>
+              <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" [(ngModel)]="price" name="price">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" [(ngModel)]="quantity" name="quantity">
+              </div>
+              <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" id="description" [(ngModel)]="description" name="description">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="discount">Discount:</label>
+                <input type="number" id="discount" [(ngModel)]="discount" name="discount">
+              </div>
+              <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" [(ngModel)]="catid" name="category">
+                  <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="productImages">Upload Images:</label>
+              <input type="file" id="productImages" (change)="onFileChange($event)" multiple>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="resetForm()" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="editMode ? updateProduct() : addProduct()">
+            {{ editMode ? 'Update Product' : 'Add Product' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<div class="product-container">
+  <h3>Product List</h3>
+  <div class="product-list">
+    <div class="product-item" *ngFor="let product of products; let i = index">
+      <div class="product-card">
+        <div [attr.id]="'carouselExample' + i" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item" [class.active]="imageIndex === 0"
+              *ngFor="let imageUrl of product.imageUrls; let imageIndex = index">
+              <img [src]="getSanitizedUrl(imageUrl)" alt="Product Image" class="product-image " height="300px" width="300px">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" [attr.data-bs-target]="'#carouselExample' + i"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" [attr.data-bs-target]="'#carouselExample' + i"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+        <div class="product-details">
+          <h4 class="product-title">{{ product.name }}</h4>
+          <p class="product-info"><strong>Price:</strong> ₹{{ product.price | number:'1.2-2' }}</p>
+          <p class="product-info"><strong>Quantity:</strong> {{ product.quantity }}</p>
+          <p class="product-info"><strong>Description:</strong> {{ product.description }}</p>
+          <p class="product-info"><strong>Discount:</strong> {{ product.discount }}%</p>
+          <p class="product-info"><strong>Category:</strong> {{ product.catName }}</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal"  (click)="onEdit(product)">Update</button>
+          <button class="btn btn-delete" (click)="onDelete(product)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

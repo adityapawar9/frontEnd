@@ -1,0 +1,51 @@
+<!-- Add Category Button -->
+<button class="btn btn-primary mt-3" (click)="addCategoryChange()">Add New Category</button>
+
+<div class="container mt-4">
+  <!-- Category List Section -->
+  <div *ngIf="isTrue">
+    <h3>Category List</h3>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th class="text-center">SN</th>
+          <th>Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cat of catList; let i = index">
+          <td class="text-center">{{ i + 1 }}</td>
+          <td>{{ cat.name }}</td>
+          <td>
+            <button (click)="deleteCategory(cat.id)" class="btn btn-danger btn-sm">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add New Category Modal -->
+  <div *ngIf="isAddCategory" class="modal fade show" tabindex="-1" style="display:block;" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content" style="background-color: #d8f0fb;">
+        <div class="modal-header">
+          <h5 class="modal-title">Add New Category</h5>
+          <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"(click)="resetForm()"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div class="mb-3">
+              <!-- <label for="categoryName" class="form-label">Category Name</label> -->
+              <input type="text" placeholder="Enter Category" id="categoryName" class="form-control" [(ngModel)]="name">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="resetForm()">Close</button>
+          <button type="button" class="btn btn-success" (click)="addCategory()">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

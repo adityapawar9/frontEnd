@@ -1,0 +1,82 @@
+{
+  "hash": "e5a8b739",
+  "configHash": "18a46a06",
+  "lockfileHash": "be4aa010",
+  "browserHash": "ac510e9d",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "3d7cd6e7",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "e1d89427",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "d2816084",
+      "needsInterop": false
+    },
+    "@angular/fire/compat": {
+      "src": "../../../../../node_modules/@angular/fire/fesm2022/angular-fire-compat.mjs",
+      "file": "@angular_fire_compat.js",
+      "fileHash": "fa240ad6",
+      "needsInterop": false
+    },
+    "@angular/fire/compat/storage": {
+      "src": "../../../../../node_modules/@angular/fire/fesm2022/angular-fire-compat-storage.mjs",
+      "file": "@angular_fire_compat_storage.js",
+      "fileHash": "7cd17f80",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "fab6c2b4",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "6cd7c792",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "e4fa685b",
+      "needsInterop": false
+    },
+    "@ng-bootstrap/ng-bootstrap": {
+      "src": "../../../../../node_modules/@ng-bootstrap/ng-bootstrap/fesm2022/ng-bootstrap.mjs",
+      "file": "@ng-bootstrap_ng-bootstrap.js",
+      "fileHash": "f5a444be",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-IRFYJBSY": {
+      "file": "chunk-IRFYJBSY.js"
+    },
+    "chunk-RFPGVD4M": {
+      "file": "chunk-RFPGVD4M.js"
+    },
+    "chunk-VFBWJUEJ": {
+      "file": "chunk-VFBWJUEJ.js"
+    },
+    "chunk-HQWYVZGT": {
+      "file": "chunk-HQWYVZGT.js"
+    },
+    "chunk-7WJHI2LR": {
+      "file": "chunk-7WJHI2LR.js"
+    },
+    "chunk-3OKCZW7X": {
+      "file": "chunk-3OKCZW7X.js"
+    }
+  }
+}

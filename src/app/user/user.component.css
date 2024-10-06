@@ -1,0 +1,43 @@
+.card-img-top {
+    height: 300px;
+    /* Set your desired height */
+    object-fit: contain;
+    /* Ensures the image covers the entire area without distortion */
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#pad {
+    padding-left: 3vw;
+}
+
+
+.btn-orange {
+    background: #ff6416;
+}
+
+
+.filter-bar {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    color: #000000;
+    font-size: 1.5vw;
+}
+
+.load-products-btn {
+    border-radius: 28px;
+    margin-left: 3vw;
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        font-size: 4vw;
+        /* Adjust text size for small screens */
+    }
+}
+
+.load-products-btn svg {
+    margin-right: 8px;
+    /* Adjust the spacing as needed */
+}
