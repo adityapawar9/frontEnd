@@ -1,136 +1,75 @@
-<div>
-    <div *ngIf="whatToShow == 0">
-        <app-home></app-home>
-        <app-login></app-login>
+<div id="smooth">
+
+  <nav class="navbar navbar-expand-lg bg-purple p-2">
+    <a class="navbar-brand" href="#">
+      <img src="https://firebasestorage.googleapis.com/v0/b/crud-e637b.appspot.com/o/ProductImages%2Fsenovo%20logo.jpg?alt=media&token=47665fe5-1b62-4c03-9f10-d6e9a07f4065"
+           width="65" height="65" class="d-inline-block align-top" alt="Logo">
+    </a>
+    <span class="text-white fw-bold">SENOVA</span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" routerLink="home">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Contact  Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="dummy">Dummy</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="about-us">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+             aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu bg-purple text-white">
+            <li><a class="dropdown-item text-white" href="#">Action</a></li>
+            <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider custom-divider">
+            </li>
+            <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light" type="submit">Search</button>
+      </form>
+      <button class="btn btn-outline-light ms-2">Login</button>
     </div>
-    <div *ngIf="whatToShow == 1">
-        <app-admin></app-admin>
-    </div>
-    <div *ngIf="whatToShow == 2">
-        <app-user></app-user>
-    </div>
+  </nav>
+
+
+  <!--<router-outlet></router-outlet>-->
+  <!--<div>-->
+  <!--    <div *ngIf="whatToShow == 0">-->
+  <!--        <app-home></app-home>-->
+  <!--        <app-login></app-login>-->
+  <!--    </div>-->
+  <!--    <div *ngIf="whatToShow == 1">-->
+  <!--        <app-admin></app-admin>-->
+  <!--    </div>-->
+  <!--    <div *ngIf="whatToShow == 2">-->
+  <!--        <app-user></app-user>-->
+  <!--    </div>-->
+  <!--</div>-->
+
+
+  <router-outlet></router-outlet>
+
+
+
+
+
+
+
 </div>
-
-<!-- Footer -->
-<footer class="text-center text-lg-start text-white" style="background-color: #272974;">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-            <span>Get connected with us on social networks:</span>
-        </div>
-        <!-- Right -->
-        <div>
-            <a href="#" class="me-4 text-reset">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
-                <i class="fab fa-google"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="#" class="me-4 text-reset">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section>
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3"></i>Company name
-                    </h6>
-                    <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Products
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Angular</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">React</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Vue</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Laravel</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Pricing</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Settings</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Orders</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Help</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p>
-                        <i class="fas fa-map-marker-alt me-3"></i>
-                        <a href="https://maps.app.goo.gl/gMDMXywTtnQguY2K7" target="_blank" rel="noopener noreferrer">
-                            158, Uruli Devachi, Pune, Maharashtra 412308
-                        </a>
-                    </p>
-                    <p>
-                        <i class="fas fa-map-marker-alt me-3"></i>
-                        <a href="https://maps.app.goo.gl/XBUuSvn8VnuGdPet8" target="_blank" rel="noopener noreferrer">
-                            1081 10R, Jayadri Park Rd, Wadki, Maharashtra 412308
-                        </a>
-                    </p>
-                    <p>
-                        <i class="fas fa-phone me-3"></i>
-                        <a href="tel:+917722004041">+91 7722004041</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-        </div>
-    </section>
-    <!-- Section: Links  -->
-
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2024 ProTeam
-    </div>
-    <!-- Copyright -->
-</footer>

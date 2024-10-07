@@ -1,7 +1,27 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ApplicationConfig, NgModule } from '@angular/core';
+import { provideRouter, RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from "./admin/admin.component";
+import { HomeComponent } from "./home/home.component";
+import { LoginComponent } from "./login/login.component";
+import { AboutUsComponent } from "./OtherPages/about-us/about-us.component";
+import { UserComponent } from "./user/user.component";
+import {DummyComponent} from "./dummy/dummy.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: 'admin', component: AdminComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'user', component: UserComponent },
+  { path: 'dummy', component: DummyComponent },
+
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Optional default route
+  { path: '**', redirectTo: 'home', pathMatch: 'full' } // Optional wildcard route for 404
+];
+
+export const appConfig: ApplicationConfig = {
+  providers: [provideRouter(routes)]
+};
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

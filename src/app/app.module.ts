@@ -18,6 +18,8 @@ import { environment } from '../environments/environment';
 import { FrontPageComponent } from './user/front-page/front-page.component';
 import { AboutUsComponent } from './OtherPages/about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
+import { DummyComponent } from './dummy/dummy.component';
+
 
 @NgModule({
   declarations: [
@@ -32,10 +34,12 @@ import { HomeComponent } from './home/home.component';
     FrontPageComponent,
     AboutUsComponent,
     HomeComponent,
+    DummyComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireStorageModule,

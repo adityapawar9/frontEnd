@@ -6,14 +6,28 @@
     border-radius: 20px;
     margin: 10px;
   }
+  /* Define the up-down animation */
+
+  @keyframes up-down {
+    0% {
+      transform: translateY(10px);
+    }
+
+    100% {
+      transform: translateY(-10px);
+    }}
 </style>
 
 <div class="container-1 p-3" style="background: -webkit-linear-gradient(135deg, #ffffff, #7c8a9e);">
   <div class="row g-0 position-relative" style="background: transparent;">
     <!-- Image Column -->
     <div class="col-md-6 mb-md-0 p-md-0">
-      <img src="../../assets/cooker.webp" class="img-fluid rounded-start" alt="Cooking Equipment"
-        style="object-fit: cover; max-height: 100%; max-width: 100%;">
+      <img
+        src="../../assets/cooker.webp"
+        class="img-fluid rounded-start"
+        alt="Cooking Equipment"
+        style="animation: up-down 2s ease-in-out infinite alternate-reverse both; " 
+      >
     </div>
     <!-- Text Column -->
     <div class="col-md-4 p-4 my-auto" style="background: transparent;">
@@ -61,7 +75,7 @@
       </a>
     </div>
 
-  
+
 
     <details class="mx-auto"
       style="margin-top: 20px; border: 2px solid #007bff; border-radius: 8px; max-width: 100%; background-color: #f1faff; box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); transition: all 0.3s ease;">
