@@ -7,8 +7,8 @@ import {
   ɵcacheInstance,
   ɵfirebaseAppFactory,
   ɵlazySDKProxy
-} from "./chunk-IRFYJBSY.js";
-import "./chunk-3OKCZW7X.js";
+} from "./chunk-SE2HK5HP.js";
+import "./chunk-PAPN7JXK.js";
 export {
   AngularFireModule,
   FIREBASE_APP_NAME,
