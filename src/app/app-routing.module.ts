@@ -6,6 +6,8 @@ import { LoginComponent } from "./login/login.component";
 import { AboutUsComponent } from "./OtherPages/about-us/about-us.component";
 import { UserComponent } from "./user/user.component";
 import {DummyComponent} from "./dummy/dummy.component";
+import {ContactUsComponent} from "./contact-us/contact-us.component";
+import {FrontPageComponent} from "./user/front-page/front-page.component";
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
@@ -14,6 +16,8 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },
   { path: 'user', component: UserComponent },
   { path: 'dummy', component: DummyComponent },
+  { path: 'contactUs', component: ContactUsComponent },
+  { path: 'frontpage', component: FrontPageComponent },
 
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Optional default route
   { path: '**', redirectTo: 'home', pathMatch: 'full' } // Optional wildcard route for 404

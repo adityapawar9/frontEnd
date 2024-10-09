@@ -9,46 +9,46 @@
 .font-style-1 {
     font-family: 'Roboto', sans-serif; /* Clean, modern sans-serif */
   }
-  
+
   .font-style-2 {
     font-family: 'Lora', serif; /* Elegant, classic serif */
   }
-  
+
   .font-style-3 {
     font-family: 'Montserrat', sans-serif; /* Popular geometric sans-serif */
   }
-  
+
   .font-style-4 {
     font-family: 'Playfair Display', serif; /* Stylish serif, great for headings */
     font-size: 1.0vw;
   }
-  
+
   .font-style-5 {
     font-family: 'Nunito', sans-serif; /* Friendly, rounded sans-serif */
     font-size: 1rem;
     font-weight: 500;
   }
-  
+
   .font-style-6 {
     font-family: 'Merriweather', serif; /* Readable serif, good for text */
   }
-  
+
   .font-style-7 {
     font-family: 'Poppins', sans-serif; /* Modern sans-serif with great versatility */
   }
-  
+
   .font-style-8 {
     font-family: 'Raleway', sans-serif; /* Light and elegant sans-serif */
   }
-  
+
   .font-style-9 {
     font-family: 'Oswald', sans-serif; /* Condensed sans-serif, great for headers */
   }
-  
+
   .font-style-10 {
     font-family: 'Lobster', cursive; /* Decorative cursive font */
   }
-  
+
 .bg-cart
 {
   background-color: rgb(219, 209, 239);
@@ -56,5 +56,7 @@
 .bg-purple
 {
 background-color: #191A48;
-
+}
+.padding {
+  padding: 4.6875rem 0 4.6875rem 0;
 }

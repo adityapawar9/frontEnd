@@ -19,6 +19,7 @@ import { FrontPageComponent } from './user/front-page/front-page.component';
 import { AboutUsComponent } from './OtherPages/about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import { DummyComponent } from './dummy/dummy.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { DummyComponent } from './dummy/dummy.component';
     AboutUsComponent,
     HomeComponent,
     DummyComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,
